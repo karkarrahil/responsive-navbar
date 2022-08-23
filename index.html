@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailWind.CSS</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>
+
+<body class="bg-gray-100">
+    <nav class="bg-slate-700 h-14 md:h-24">
+        <div class="hidden md:block min-h-fit">
+
+            <div class="flex justify-between justify-items-center items-center text-white ml-4">
+                <div class="Menu lg:space-x-3 md:space-x-2">
+                    <a href="#">Home</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                    <a href="#">More</a>
+                </div>
+                <div class="Logo">
+                    <img src="img/Youtube.png" alt="#" class="w-36 h-24 md:mr-24">
+                </div>
+                <div class="Follow lg:space-x-4 md:space-x-2 mr-4">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="block md:hidden transition-all">
+
+            <div class="flex items-center justify-between">
+
+                <div class="image pr-24 relative bottom-4 right-6">
+                    <img src="img/Youtube.png" alt="#" class="w-28 ">
+
+                </div>
+                <div class="icon mr-2 relative bottom-4">
+                    <button onclick="toggleMenu()"><i class="fa-solid fa-bars text-white"></i></button>
+                </div>
+            </div>
+            <div class="content relative bottom-8  rounded-lg bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 text-black transition duration-100"
+                id="mobileMenuContent">
+
+                <div class="menu  flex flex-col text-sm ml-4 text-center">
+                    <a href="#" class="p-1">Home</a>
+                    <a href="#" class="p-1">Blog</a>
+                    <a href="#" class="p-1">Contact</a>
+                    <a href="#" class="p-1">More</a>
+                </div>
+                <div class="icon text-center ml-4 p-2">
+                    <a href="#"><i class="fa-brands fa-twitter px-6 "></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook px-6"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram px-6"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin px-6"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <script>
+        function toggleMenu() {
+            const mobileMenuContent = document.getElementById('mobileMenuContent')
+            if (mobileMenuContent.getAttribute('class') === 'hidden') {
+                mobileMenuContent.setAttribute('class', 'block')
+               
+               
+            } else {
+                mobileMenuContent.setAttribute('class', 'hidden')
+            }
+        }
+    </script>
+</body>
+
+</html>
